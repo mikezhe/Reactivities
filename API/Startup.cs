@@ -11,12 +11,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+
 using Persistence;
 
 namespace API
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -30,15 +32,20 @@ namespace API
             services.AddDbContext<DataContext>(opt =>
             opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
             );
-            services.AddCors(opt =>{
-            opt.AddPolicy("CorsPolicy",policy =>
+
+
+            services.AddCors (opt =>
+             {
+            opt.AddPolicy("CorsPolicy", policy =>
             {
-                policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("htt[://localhost:3000");
+                policy.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod();
+              
             }
             );
             }
             );
-            services.AddControllers();
+
+          services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +57,7 @@ namespace API
             }
 
             //    app.UseHttpsRedirection();
-
+ app.UseCors("CorsPolicy");
             app.UseRouting();
 
             app.UseAuthorization();
@@ -59,7 +66,7 @@ namespace API
             {
                 endpoints.MapControllers();
             });
-            app.UseCors("CorsPolicy");
+           
 
         }
     }
