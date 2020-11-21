@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "crrYqjjidlRpkFaRjpgvuDybQKZh6DM7MHIPV/5B1kB4HpmtYnJ7s5WkgxylhKDWIs03+CBODkud4NLMxXIolg==",
+  "dgSpecHash": "c8LF6yo5dOIuSs4UPIe49nYlkKJ5MtW/9S40Vfft9yxYgSS3gUkexuvn6XKavmKAWueVqFtEo9NGjReh3spVgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mikhail\\Documents\\ReactNetCore\\MyProject\\Reactivities\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mikhail\\.nuget\\packages\\mediatr\\7.0.0\\mediatr.7.0.0.nupkg.sha512",
+    "C:\\Users\\Mikhail\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\7.0.0\\mediatr.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Mikhail\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\Mikhail\\.nuget\\packages\\microsoft.data.sqlite.core\\3.0.0\\microsoft.data.sqlite.core.3.0.0.nupkg.sha512",
     "C:\\Users\\Mikhail\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.0.0\\microsoft.dotnet.platformabstractions.3.0.0.nupkg.sha512",
